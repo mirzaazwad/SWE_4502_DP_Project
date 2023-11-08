@@ -1,7 +1,6 @@
 package Ducks;
 
-import Quack.IQuackable;
-import Quack.Quack;
+import Abstractions.IQuackable;
 
 public class MallardDuck implements IQuackable{
     private String name;

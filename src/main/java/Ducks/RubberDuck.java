@@ -1,6 +1,6 @@
 package Ducks;
 
-import Quack.IQuackable;
+import Abstractions.IQuackable;
 
 public class RubberDuck implements IQuackable {
     private String name;
