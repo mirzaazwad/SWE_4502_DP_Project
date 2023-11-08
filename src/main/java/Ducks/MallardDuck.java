@@ -1,4 +1,9 @@
 package Ducks;
 
-public class MallardDuck {
+import Abstractions.IQuackable;
+
+public class MallardDuck implements IQuackable {
+    public String quack(){
+        return "Quack Quack";
+    }
 }
