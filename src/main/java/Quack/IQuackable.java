@@ -1,4 +1,4 @@
-package Abstractions;
+package Quack;
 
 public interface IQuackable {
     String quack();
