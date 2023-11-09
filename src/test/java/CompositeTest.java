@@ -42,11 +42,12 @@ public class CompositeTest {
 
     @Test
     public void TestGetName(){
-        assertEquals("Donald\n" +
-                "Ronald\n" +
-                "Vivi\n" +
-                "Ducky\n" +
-                "Bad Ducky\n",flock.getName());
+        String expected="";
+        for (String dummy_duck:
+             duck_names) {
+            expected+=dummy_duck+"\n";
+        }
+        assertEquals(expected,flock.getName());
     }
 
 }
