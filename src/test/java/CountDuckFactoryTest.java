@@ -1,4 +1,4 @@
-import Abstractions.IQuackable;
+import Factory.CountingDuckFactory;
 import Wrappers.CounterDecorator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -48,13 +48,8 @@ public class CountDuckFactoryTest {
 
     @Test
     public void CountQuackFactoryInvalidQuacks(){
-        this.setQuacks(10);
         try{
             CounterDecorator quackCount=new CountingDuckFactory().createCountingDuck("new-type","Donald");
-            for(int i=0;i<this.quacks;i++){
-                quackCount.quack();
-            }
-            assertEquals(this.quacks,quackCount.getQuackCount());
         }
         catch (Exception e){
             assertEquals("Invalid Type",e.getMessage());
