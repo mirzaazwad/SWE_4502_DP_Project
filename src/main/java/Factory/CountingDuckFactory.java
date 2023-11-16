@@ -1,6 +1,5 @@
 package Factory;
 
-import Abstractions.IQuackable;
 import Wrappers.CounterDecorator;
 
 public class CountingDuckFactory extends DuckFactory {

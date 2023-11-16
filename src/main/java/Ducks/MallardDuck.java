@@ -1,8 +1,8 @@
 package Ducks;
 
-import Abstractions.IQuackable;
+import DuckTracker.ILocator;
 
-public class MallardDuck implements IQuackable{
+public class MallardDuck implements IQuackable {
     private String name;
     public MallardDuck(String name){
         this.name=name;
@@ -15,4 +15,5 @@ public class MallardDuck implements IQuackable{
     public String getName(){
         return this.name;
     }
+
 }

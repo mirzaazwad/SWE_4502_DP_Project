@@ -1,6 +1,6 @@
 package Factory;
 
-import Abstractions.IQuackable;
+import Ducks.IQuackable;
 import Birds.Goose;
 import Ducks.*;
 

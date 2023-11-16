@@ -1,7 +1,5 @@
 package Birds;
 
-import Abstractions.IBird;
-
 public class Goose implements IBird {
     private String name;
     public Goose(String name){

@@ -1,12 +1,12 @@
 package Ducks;
 
-import Abstractions.IQuackable;
+import DuckTracker.ILocator;
 import Wrappers.QuackIterator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Flock implements IQuackable{
+public class Flock implements IQuackable {
     private List<IQuackable> ducks;
     public Flock(){
         this.ducks=new ArrayList<IQuackable>();
@@ -34,5 +34,8 @@ public class Flock implements IQuackable{
             result+=(current_duck.getName()+"\n");
         }
         return result;
+    }
+    public List<IQuackable> getDucks(){
+        return this.ducks;
     }
 }

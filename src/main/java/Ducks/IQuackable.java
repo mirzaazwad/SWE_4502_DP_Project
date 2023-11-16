@@ -1,4 +1,4 @@
-package Abstractions;
+package Ducks;
 
 public interface IQuackable {
     String quack();

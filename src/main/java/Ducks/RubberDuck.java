@@ -1,6 +1,6 @@
 package Ducks;
 
-import Abstractions.IQuackable;
+import DuckTracker.ILocator;
 
 public class RubberDuck implements IQuackable {
     private String name;

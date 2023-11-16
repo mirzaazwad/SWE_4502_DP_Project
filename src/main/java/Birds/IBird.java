@@ -1,4 +1,4 @@
-package Abstractions;
+package Birds;
 
 public interface IBird {
     public String makeSound();

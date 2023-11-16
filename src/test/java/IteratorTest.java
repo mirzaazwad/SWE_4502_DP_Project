@@ -1,4 +1,4 @@
-import Abstractions.IQuackable;
+import Ducks.IQuackable;
 import Ducks.AlabioDuck;
 import Ducks.MallardDuck;
 import Ducks.MarbledDuck;

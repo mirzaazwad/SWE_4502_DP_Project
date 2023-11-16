@@ -1,9 +1,9 @@
 package Ducks;
 
-import Abstractions.IBird;
-import Abstractions.IQuackable;
+import Birds.IBird;
+import DuckTracker.ILocator;
 
-public class DuckAdapter implements IQuackable{
+public class DuckAdapter implements IQuackable {
     private IBird bird;
     public DuckAdapter(IBird bird){
         this.bird=bird;
@@ -16,5 +16,6 @@ public class DuckAdapter implements IQuackable{
     public String quack(){
         return this.bird.makeSound();
     }
+
 
 }
