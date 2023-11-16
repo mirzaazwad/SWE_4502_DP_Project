@@ -1,6 +1,6 @@
 package Wrappers;
 
-import Abstractions.IQuackable;
+import Ducks.IQuackable;
 
 import java.util.Iterator;
 import java.util.List;

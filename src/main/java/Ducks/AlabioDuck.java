@@ -1,6 +1,6 @@
 package Ducks;
 
-import Abstractions.IQuackable;
+import DuckTracker.ILocator;
 
 public class AlabioDuck implements IQuackable {
     private String name;
@@ -15,4 +15,5 @@ public class AlabioDuck implements IQuackable {
     public String quack(){
         return "Alabian Quack";
     }
+
 }

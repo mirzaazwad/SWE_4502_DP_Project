@@ -1,6 +1,6 @@
 package Wrappers;
 
-import Abstractions.IQuackable;
+import Ducks.IQuackable;
 
 public class CounterDecorator implements IQuackable{
     private IQuackable duck;
