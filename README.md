@@ -34,7 +34,7 @@ mvn --version
 
 To confirm your installation.
 
-5. Then just go to the project directory and write 
+5. Then just go to the cloned/downloaded project directory and write 
 ```
 mvn clean install
 ```
