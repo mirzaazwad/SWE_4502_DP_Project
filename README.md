@@ -34,7 +34,7 @@ mvn --version
 
 To confirm your installation.
 
-5. Then just go to the project directory and write 
+5. Then just go to the cloned/downloaded project directory and write 
 ```
 mvn clean install
 ```
@@ -54,3 +54,6 @@ sudo apt-get install maven
 
 2. Follow steps 3 to 6 for Windows
 
+### Mac
+
+For MAC installation, you can refer to this [article](https://www.baeldung.com/install-maven-on-windows-linux-mac)
