@@ -13,3 +13,44 @@ objects in the same way as individual objects (use iterator).
 duck quacking in real time? (use observer)
 
 This system makes use of github actions for testing
+
+To run this application in your local machine preferably download the apache maven binary or use intelliJ.
+
+## To setup apache maven in your local machine you can follow the steps given below:
+
+### Windows
+
+1. Download the apache maven binary from the following link: [Apache Maven](https://maven.apache.org/download.cgi)
+
+2. Extract the downloaded bin file and then add the path to bin folder within the extracted directory to your system environment variables
+
+3. For VsCode you can get the "Maven for Java" extension provided by Microsoft to get the flavors of IntelliJ
+
+4. Upon adding to the system environment variables you can check using 
+
+```
+mvn --version
+```
+
+To confirm your installation.
+
+5. Then just go to the project directory and write 
+```
+mvn clean install
+```
+
+6. To execute the code just simply write
+```
+mvn exec:java
+```
+It will essentially execute the main class
+
+### Linux
+
+1. Install maven simply by using
+```
+sudo apt-get install maven
+```
+
+2. Follow steps 3 to 6 for Windows
+
