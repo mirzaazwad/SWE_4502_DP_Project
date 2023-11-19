@@ -11,3 +11,5 @@ decorator object.
 objects in the same way as individual objects (use iterator).
 6. We also need to track individual ducks. Can you give us a way to keep track of individual
 duck quacking in real time? (use observer)
+
+This system makes use of github actions for testing
