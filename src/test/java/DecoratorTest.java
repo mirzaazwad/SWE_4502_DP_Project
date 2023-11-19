@@ -25,7 +25,7 @@ public class DecoratorTest {
         for(int i=0;i<this.quacks;i++){
             countQuacks.quack();
         }
-        assertEquals(this.quacks,countQuacks.getQuackCount());
+        assertEquals(this.quacks,countQuacks.getQuack_count());
     }
 
     @Test
@@ -36,6 +36,6 @@ public class DecoratorTest {
         for(int i=0;i<this.quacks;i++){
             countQuacks.quack();
         }
-        assertEquals(this.quacks,countQuacks.getQuackCount());
+        assertEquals(this.quacks,countQuacks.getQuack_count());
     }
 }

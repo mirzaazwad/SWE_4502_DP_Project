@@ -35,7 +35,7 @@
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>3.1.0</version>
                     <configuration>
-                        <mainClass>org.Main</mainClass>
+                        <mainClass>Simulator.Main</mainClass>
                     </configuration>
                 </plugin>
                 <plugin>

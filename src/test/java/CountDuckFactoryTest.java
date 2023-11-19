@@ -24,7 +24,7 @@ public class CountDuckFactoryTest {
             for(int i=0;i<this.quacks;i++){
                 quackCount.quack();
             }
-            assertEquals(this.quacks,quackCount.getQuackCount());
+            assertEquals(this.quacks,quackCount.getQuack_count());
         }
         catch (Exception e){
             assertEquals("",e.getMessage());
@@ -39,7 +39,7 @@ public class CountDuckFactoryTest {
             for(int i=0;i<this.quacks;i++){
                 quackCount.quack();
             }
-            assertEquals(this.quacks,quackCount.getQuackCount());
+            assertEquals(this.quacks,quackCount.getQuack_count());
         }
         catch (Exception e){
             assertEquals("",e.getMessage());

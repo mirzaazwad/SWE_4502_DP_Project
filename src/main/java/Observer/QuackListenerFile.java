@@ -17,7 +17,6 @@ public class QuackListenerFile implements IQuackListener{
     public void update(String event){
         try{
             quackWriter.append(event+"\n");
-            System.out.println(event);
         }
         catch (IOException e){
             e.printStackTrace();

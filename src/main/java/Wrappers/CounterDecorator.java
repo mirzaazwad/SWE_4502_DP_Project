@@ -17,14 +17,10 @@ public class CounterDecorator implements IQuackable{
     }
     public String quack(){
         this.quack_count++;
-        return duck.quack();
+        return String.format(this.duck.quack()+"ed %d times",this.quack_count);
     }
 
-    public void addSubscriber(IQuackListener quackListener){
-        this.duck.addSubscriber(quackListener);
-    }
-
-    public Integer getQuackCount(){
+    public Integer getQuack_count(){
         return this.quack_count;
     }
 }

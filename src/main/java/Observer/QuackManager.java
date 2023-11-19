@@ -3,11 +3,8 @@ package Observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuackManager {
-    private List<IQuackListener> listeners;
-    public QuackManager(){
-        listeners=new ArrayList<IQuackListener>();
-    }
+public abstract class QuackManager {
+    protected List<IQuackListener> listeners;
 
     public void subscribe(IQuackListener quackListener){
         listeners.add(quackListener);
