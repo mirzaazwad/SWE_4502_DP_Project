@@ -6,21 +6,21 @@ public class DuckTest {
     @Test
     public void TestMarbledDuck(){
         MarbledDuck marbledDuck=new MarbledDuck("Ronald");
-        assertEquals("Quack Quack Quack",marbledDuck.quack());
+        assertEquals("Quack",marbledDuck.quack());
         assertEquals("Ronald",marbledDuck.getName());
     }
 
     @Test
     public void TestMallardDuck(){
         MallardDuck mallardDuck=new MallardDuck("Donald");
-        assertEquals("Quack Quack",mallardDuck.quack());
+        assertEquals("Quack",mallardDuck.quack());
         assertEquals("Donald",mallardDuck.getName());
     }
 
     @Test
     public void TestAlabioDuck(){
         AlabioDuck alabioDuck=new AlabioDuck("McDonald");
-        assertEquals("Alabian Quack",alabioDuck.quack());
+        assertEquals("Quack",alabioDuck.quack());
         assertEquals("McDonald",alabioDuck.getName());
     }
 

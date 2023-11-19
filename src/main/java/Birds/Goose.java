@@ -6,7 +6,7 @@ public class Goose implements IBird {
         this.name=name;
     }
     public String makeSound(){
-        return "Honk Honk";
+        return "Honk";
     }
 
     public String getName(){

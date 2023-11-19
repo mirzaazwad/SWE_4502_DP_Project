@@ -8,6 +8,6 @@ public class AdapterTest {
     public void TestGoose(){
         Goose goose=new Goose("Goose McLaughin");
         DuckAdapter duckAdapter=new DuckAdapter(goose);
-        assertEquals("Honk Honk",duckAdapter.quack());
+        assertEquals("Honk",duckAdapter.quack());
     }
 }

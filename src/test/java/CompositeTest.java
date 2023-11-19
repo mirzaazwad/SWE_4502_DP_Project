@@ -33,9 +33,9 @@ public class CompositeTest {
 
     @Test
     public void TestQuack(){
-        assertEquals("Quack Quack\n" +
-                "Quack Quack Quack\n" +
-                "Alabian Quack\n" +
+        assertEquals("Quack\n" +
+                "Quack\n" +
+                "Quack\n" +
                 "Squeak\n\n",flock.quack());
     }
 

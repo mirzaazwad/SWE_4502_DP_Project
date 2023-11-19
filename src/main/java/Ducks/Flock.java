@@ -1,6 +1,6 @@
 package Ducks;
 
-import DuckTracker.ILocator;
+import Observer.IQuackListener;
 import Wrappers.QuackIterator;
 
 import java.util.ArrayList;
@@ -35,6 +35,15 @@ public class Flock implements IQuackable {
         }
         return result;
     }
+
+    public void addSubscriber(IQuackListener quackListener){
+        QuackIterator quackIterator=new QuackIterator(ducks);
+        while (quackIterator.hasNext()){
+            IQuackable current_duck=quackIterator.next();
+            current_duck.addSubscriber(quackListener);
+        }
+    }
+
     public List<IQuackable> getDucks(){
         return this.ducks;
     }

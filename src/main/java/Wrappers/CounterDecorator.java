@@ -2,7 +2,7 @@ package Wrappers;
 
 import Ducks.IQuackable;
 
-public class CounterDecorator implements IQuackable{
+public class CounterDecorator{
     private IQuackable duck;
     private Integer quack_count;
 
