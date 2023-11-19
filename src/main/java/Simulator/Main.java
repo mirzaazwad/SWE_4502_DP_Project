@@ -11,26 +11,24 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        try{
-            FileWriter fileWriter=new FileWriter("quack_log.txt",true);
-            LocalDateTime date=LocalDateTime.now();
+        try {
+            FileWriter fileWriter = new FileWriter("quack_log.txt", true);
+            LocalDateTime date = LocalDateTime.now();
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-            fileWriter.append(dtf.format(date)+"\n");
+            fileWriter.append(dtf.format(date) + "\n");
             fileWriter.close();
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         Scanner scanner = new Scanner(System.in);
         CountingDuckFactory duckFactory = new CountingDuckFactory();
         QuackListenerFile quackListenerFile = new QuackListenerFile("quack_log.txt");
-        List<IQuackable> ducks=new ArrayList<IQuackable>();
+        List<IQuackable> ducks = new ArrayList<IQuackable>();
         Flock flock = new Flock();
 
         while (true) {
@@ -64,20 +62,21 @@ public class Main {
 
                 case 2:
                     System.out.println("Select Duck to Add to Flock:");
-                    for(int i=1;i<=ducks.size();i++){
-                        System.out.printf("%d: "+ducks.get(i-1).getName()+"\n",i);
+                    for (int i = 1; i <= ducks.size(); i++) {
+                        System.out.printf("%d: " + ducks.get(i - 1).getName() + "\n", i);
                     }
                     int duckIndex = scanner.nextInt();
-                    flock.add(ducks.get(duckIndex-1));
-                    System.out.println(ducks.get(duckIndex-1).getName() + " added to the flock.");
-                    ducks.remove(duckIndex-1);
+                    flock.add(ducks.get(duckIndex - 1));
+                    System.out.println(ducks.get(duckIndex - 1).getName() + " added to the flock.");
+                    ducks.remove(duckIndex - 1);
                     break;
 
                 case 3:
                     System.out.println("Make a Duck in Flock Quack");
-                    System.out.println(flock.getName());;
+                    System.out.println(flock.getName());
+                    ;
                     int flockIndex = scanner.nextInt();
-                    flock.getDucks().get(flockIndex-1).quack();
+                    flock.getDucks().get(flockIndex - 1).quack();
                     break;
                 case 4:
                     System.out.println("Making Flock Quack:");
