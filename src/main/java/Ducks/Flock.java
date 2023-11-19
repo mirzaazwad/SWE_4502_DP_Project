@@ -29,9 +29,11 @@ public class Flock implements IQuackable {
     public String getName(){
         QuackIterator quackIterator=new QuackIterator(ducks);
         String result="";
+        Integer i=1;
         while (quackIterator.hasNext()){
             IQuackable current_duck=quackIterator.next();
-            result+=(current_duck.getName()+"\n");
+            result+=(i.toString()+". "+current_duck.getName()+"\n");
+            i+=1;
         }
         return result;
     }
