@@ -13,6 +13,7 @@ target/
 *.ipr
 
 logs.txt
+quack_log.txt
 
 ### Eclipse ###
 .apt_generated
