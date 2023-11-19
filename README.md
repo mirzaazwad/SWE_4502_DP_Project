@@ -48,14 +48,12 @@ It will essentially execute the main class
 ### Linux
 
 1. Install maven simply by using
-
-
-### Mac
-
-For MAC installation, you can refer to this [article](https://www.baeldung.com/install-maven-on-windows-linux-mac)
 ```
 sudo apt-get install maven
 ```
 
 2. Follow steps 3 to 6 for Windows
 
+### Mac
+
+For MAC installation, you can refer to this [article](https://www.baeldung.com/install-maven-on-windows-linux-mac)
