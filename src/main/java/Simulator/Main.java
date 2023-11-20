@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import static Simulator.CounterSimulator.quackCounts;
 import static Simulator.FlockSimulator.*;
-import static Simulator.QuackListenerSimulator.*;
+import static Simulator.CreateDuckSimulator.*;
 
 public class Main {
     public static Scanner scanner=new Scanner(System.in);;

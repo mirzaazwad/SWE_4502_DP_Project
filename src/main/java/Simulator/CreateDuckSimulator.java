@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 import static Simulator.CounterSimulator.duckFactory;
 import static Simulator.Main.*;
 
-public class QuackListenerSimulator {
+public class CreateDuckSimulator {
     public static ConsoleObserver quackListenerConsole=new ConsoleObserver();
     public static FileObserver quackListenerFile = new FileObserver("quack_log.txt");
 
