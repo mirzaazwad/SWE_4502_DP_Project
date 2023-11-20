@@ -1,5 +1,5 @@
 package Observer;
 
-public interface IQuackListener {
+public interface IQuackObserver {
     void update(String event);
 }

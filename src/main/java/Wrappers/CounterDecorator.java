@@ -1,7 +1,6 @@
 package Wrappers;
 
 import Ducks.IQuackable;
-import Observer.IQuackListener;
 
 public class CounterDecorator implements IQuackable{
     private IQuackable duck;

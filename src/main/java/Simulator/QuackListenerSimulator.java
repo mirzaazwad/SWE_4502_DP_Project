@@ -1,8 +1,8 @@
 package Simulator;
 
-import Observer.QuackListenerConsole;
-import Observer.QuackListenerFile;
-import Wrappers.QuackManagerDecorator;
+import Observer.ConsoleObserver;
+import Observer.FileObserver;
+import Wrappers.QuackSubjectDecorator;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,8 +13,8 @@ import static Simulator.CounterSimulator.duckFactory;
 import static Simulator.Main.*;
 
 public class QuackListenerSimulator {
-    public static QuackListenerConsole quackListenerConsole=new QuackListenerConsole();
-    public static QuackListenerFile quackListenerFile = new QuackListenerFile("quack_log.txt");
+    public static ConsoleObserver quackListenerConsole=new ConsoleObserver();
+    public static FileObserver quackListenerFile = new FileObserver("quack_log.txt");
 
     public static void init(){
         try {
@@ -35,7 +35,7 @@ public class QuackListenerSimulator {
         String duckName = scanner.nextLine();
 
         try {
-            QuackManagerDecorator duck = new QuackManagerDecorator(duckFactory.createDuck(duckType, duckName));
+            QuackSubjectDecorator duck = new QuackSubjectDecorator(duckFactory.createDuck(duckType, duckName));
             duck.subscribe(quackListenerConsole);
             duck.subscribe(quackListenerFile);
             ducks.add(duck);

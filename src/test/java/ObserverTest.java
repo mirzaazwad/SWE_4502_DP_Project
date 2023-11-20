@@ -1,7 +1,7 @@
 import Birds.Goose;
 import Ducks.*;
-import Observer.QuackListenerFile;
-import Wrappers.QuackManagerDecorator;
+import Observer.FileObserver;
+import Wrappers.QuackSubjectDecorator;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 
@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(OrderAnnotation.class)
 public class ObserverTest {
-    private QuackListenerFile quackListenerFile;
+    private FileObserver quackListenerFile;
     private static String filename;
     @BeforeAll
     public static void file_init(){
@@ -33,7 +33,7 @@ public class ObserverTest {
     }
     @BeforeEach
     public void file(){
-        quackListenerFile=new QuackListenerFile(filename);
+        quackListenerFile=new FileObserver(filename);
     }
 
     @AfterEach
@@ -43,7 +43,7 @@ public class ObserverTest {
     @Test
     @Order(1)
     public void testMarbledQuackConsole(){
-        QuackManagerDecorator marbledDuck=new QuackManagerDecorator(new MarbledDuck("Donald"));
+        QuackSubjectDecorator marbledDuck=new QuackSubjectDecorator(new MarbledDuck("Donald"));
         marbledDuck.subscribe(quackListenerFile);
         marbledDuck.quack();
     }
@@ -51,7 +51,7 @@ public class ObserverTest {
     @Test
     @Order(2)
     public void testWoodenQuackConsole(){
-        QuackManagerDecorator woodenDuck=new QuackManagerDecorator(new WoodenDuck("Donald"));
+        QuackSubjectDecorator woodenDuck=new QuackSubjectDecorator(new WoodenDuck("Donald"));
         woodenDuck.subscribe(quackListenerFile);
         woodenDuck.quack();
     }
@@ -59,7 +59,7 @@ public class ObserverTest {
     @Test
     @Order(3)
     public void testRubberQuackConsole(){
-        QuackManagerDecorator rubberDuck=new QuackManagerDecorator(new RubberDuck("Donald"));
+        QuackSubjectDecorator rubberDuck=new QuackSubjectDecorator(new RubberDuck("Donald"));
         rubberDuck.subscribe(quackListenerFile);
         rubberDuck.quack();
     }
@@ -67,7 +67,7 @@ public class ObserverTest {
     @Test
     @Order(4)
     public void testAlabioQuackConsole(){
-        QuackManagerDecorator alabioDuck=new QuackManagerDecorator(new AlabioDuck("Donald"));
+        QuackSubjectDecorator alabioDuck=new QuackSubjectDecorator(new AlabioDuck("Donald"));
         alabioDuck.subscribe(quackListenerFile);
         alabioDuck.quack();
     }
@@ -75,7 +75,7 @@ public class ObserverTest {
     @Test
     @Order(5)
     public void testMallardQuackConsole(){
-        QuackManagerDecorator mallardDuck=new QuackManagerDecorator(new MallardDuck("Donald"));
+        QuackSubjectDecorator mallardDuck=new QuackSubjectDecorator(new MallardDuck("Donald"));
         mallardDuck.subscribe(quackListenerFile);
         mallardDuck.quack();
     }
@@ -84,7 +84,7 @@ public class ObserverTest {
     @Order(6)
     public void testGooseQuackConsole(){
         Goose goose=new Goose("Goose McLaughin");
-        QuackManagerDecorator duckAdapter=new QuackManagerDecorator(new DuckAdapter(goose));
+        QuackSubjectDecorator duckAdapter=new QuackSubjectDecorator(new DuckAdapter(goose));
         duckAdapter.subscribe(quackListenerFile);
         duckAdapter.quack();
     }
@@ -93,9 +93,9 @@ public class ObserverTest {
     @Order(7)
     public void testMultiplePublishers(){
         Goose goose=new Goose("Goose McLaughin");
-        QuackManagerDecorator mallardDuck=new QuackManagerDecorator(new MallardDuck("Donald"));
-        QuackManagerDecorator rubberDuck=new QuackManagerDecorator(new RubberDuck("Ronald"));
-        QuackManagerDecorator duckAdapter=new QuackManagerDecorator(new DuckAdapter(goose));
+        QuackSubjectDecorator mallardDuck=new QuackSubjectDecorator(new MallardDuck("Donald"));
+        QuackSubjectDecorator rubberDuck=new QuackSubjectDecorator(new RubberDuck("Ronald"));
+        QuackSubjectDecorator duckAdapter=new QuackSubjectDecorator(new DuckAdapter(goose));
         mallardDuck.subscribe(quackListenerFile);
         duckAdapter.subscribe(quackListenerFile);
         rubberDuck.subscribe(quackListenerFile);
@@ -109,11 +109,11 @@ public class ObserverTest {
     @Order(8)
     public void testFlock(){
         Flock flock=new Flock();
-        QuackManagerDecorator mallard=new QuackManagerDecorator(new MallardDuck("Vivi"));
-        QuackManagerDecorator marbled=new QuackManagerDecorator(new MarbledDuck("Sanji"));
-        QuackManagerDecorator alabian=new QuackManagerDecorator(new AlabioDuck("Donald"));
-        QuackManagerDecorator rubber=new QuackManagerDecorator(new RubberDuck("Ronald"));
-        QuackManagerDecorator wooden=new QuackManagerDecorator(new WoodenDuck("Duckling"));
+        QuackSubjectDecorator mallard=new QuackSubjectDecorator(new MallardDuck("Vivi"));
+        QuackSubjectDecorator marbled=new QuackSubjectDecorator(new MarbledDuck("Sanji"));
+        QuackSubjectDecorator alabian=new QuackSubjectDecorator(new AlabioDuck("Donald"));
+        QuackSubjectDecorator rubber=new QuackSubjectDecorator(new RubberDuck("Ronald"));
+        QuackSubjectDecorator wooden=new QuackSubjectDecorator(new WoodenDuck("Duckling"));
         mallard.subscribe(quackListenerFile);
         marbled.subscribe(quackListenerFile);
         alabian.subscribe(quackListenerFile);

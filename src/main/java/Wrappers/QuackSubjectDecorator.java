@@ -1,16 +1,16 @@
 package Wrappers;
 
 import Ducks.IQuackable;
-import Observer.IQuackListener;
-import Observer.QuackManager;
+import Observer.IQuackObserver;
+import Observer.QuackSubject;
 
 import java.util.ArrayList;
 
-public class QuackManagerDecorator extends QuackManager implements IQuackable {
+public class QuackSubjectDecorator extends QuackSubject implements IQuackable {
     private CounterDecorator duck;
 
-    public QuackManagerDecorator(IQuackable duck){
-        this.listeners=new ArrayList<IQuackListener>();
+    public QuackSubjectDecorator(IQuackable duck){
+        this.listeners=new ArrayList<IQuackObserver>();
         this.duck=new CounterDecorator(duck);
     }
 

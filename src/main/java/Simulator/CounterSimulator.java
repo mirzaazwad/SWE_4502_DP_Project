@@ -2,7 +2,7 @@ package Simulator;
 
 import Factory.DuckFactory;
 import Wrappers.QuackIterator;
-import Wrappers.QuackManagerDecorator;
+import Wrappers.QuackSubjectDecorator;
 
 import static Simulator.FlockSimulator.flock;
 
@@ -16,7 +16,7 @@ public class CounterSimulator {
         System.out.println("Quack Counts:");
         QuackIterator quackIterator = new QuackIterator(flock.getDucks());
         while (quackIterator.hasNext()) {
-            QuackManagerDecorator currentDuck = (QuackManagerDecorator)quackIterator.next();
+            QuackSubjectDecorator currentDuck = (QuackSubjectDecorator)quackIterator.next();
             System.out.println(currentDuck.getName() + ": " +
                     currentDuck.getDuck().getQuack_count() + " quacks");
         }

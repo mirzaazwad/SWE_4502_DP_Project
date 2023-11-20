@@ -15,6 +15,11 @@ public class FlockSimulator {
         System.out.println("Make a Duck in Flock Quack");
         System.out.println(flock.getName());
         int flockIndex = scanner.nextInt();
+        if(flockIndex>flock.getDucks().size()){
+            System.out.println("Flock has only "+flock.getDucks().size()+" ducks");
+            System.out.printf("Flock does not have %d ducks\n",flockIndex);
+            return;
+        }
         flock.getDucks().get(flockIndex - 1).quack();
     }
 
@@ -36,6 +41,10 @@ public class FlockSimulator {
             System.out.printf("%d: " + ducks.get(i - 1).getName() + "\n", i);
         }
         int duckIndex = scanner.nextInt();
+        if(duckIndex>ducks.size()){
+            System.out.printf("There are only %d ducks in buffer\n",ducks.size());
+            return;
+        }
         flock.add(ducks.get(duckIndex - 1));
         System.out.println(ducks.get(duckIndex - 1).getName() + " added to the flock.");
         ducks.remove(duckIndex - 1);

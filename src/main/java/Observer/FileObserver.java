@@ -4,11 +4,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
-public class QuackListenerFile implements IQuackListener{
+public class FileObserver implements IQuackObserver {
     private FileWriter quackWriter;
-    public QuackListenerFile(String filename){
+    public FileObserver(String filename){
         try {
             quackWriter = new FileWriter(filename,true);
         } catch (IOException e) {
