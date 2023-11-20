@@ -2,6 +2,8 @@ package Observer;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class QuackListenerFile implements IQuackListener{
@@ -16,7 +18,9 @@ public class QuackListenerFile implements IQuackListener{
     }
     public void update(String event){
         try{
-            quackWriter.append(event+"\n");
+            LocalDateTime date = LocalDateTime.now();
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            quackWriter.append(dtf.format(date)+": "+event+"\n");
         }
         catch (IOException e){
             e.printStackTrace();

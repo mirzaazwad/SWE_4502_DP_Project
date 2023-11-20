@@ -1,8 +1,9 @@
 package Ducks;
 
-public class AlabioDuck implements IQuackable {
+public class AlabioDuck extends DuckIdentification implements IQuackable {
     private String name;
     public AlabioDuck(String name){
+        super();
         this.name=name;
     }
 
@@ -11,7 +12,7 @@ public class AlabioDuck implements IQuackable {
     }
 
     public String quack(){
-        return this.getName()+", "+this.getClass().getSimpleName()+"->"+"Quack";
+        return this.getID()+". "+this.getName()+", "+this.getClass().getSimpleName()+"->"+"Quack";
     }
 
 }

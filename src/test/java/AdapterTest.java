@@ -9,6 +9,6 @@ public class AdapterTest {
         Goose goose=new Goose("Goose McLaughin");
         DuckAdapter duckAdapter=new DuckAdapter(goose);
         assertEquals("Goose McLaughin",duckAdapter.getName());
-        assertEquals("Goose McLaughin, DuckAdapter->Honk",duckAdapter.quack());
+        assertEquals("1. Goose McLaughin, DuckAdapter->Honk",duckAdapter.quack());
     }
 }

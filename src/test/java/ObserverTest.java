@@ -137,8 +137,10 @@ public class ObserverTest {
             Scanner expectedLog=new Scanner(expectedLogFile);
             while (log.hasNextLine() && expectedLog.hasNextLine()) {
                 String expected = log.nextLine();
+                String expectedCheck=expected.split(": ")[1];
                 String actual=expectedLog.nextLine();
-                assertEquals(actual,expected);
+                String actualCheck=actual.split(": ")[1];
+                assertEquals(expectedCheck,actualCheck);
             }
             log.close();
         } catch (FileNotFoundException e) {

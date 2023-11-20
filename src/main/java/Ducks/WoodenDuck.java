@@ -1,8 +1,9 @@
 package Ducks;
 
-public class WoodenDuck implements IQuackable {
+public class WoodenDuck extends DuckIdentification implements IQuackable {
     private String name;
     public WoodenDuck(String name){
+        super();
         this.name=name;
     }
     public String getName(){
@@ -10,6 +11,6 @@ public class WoodenDuck implements IQuackable {
     }
 
     public String quack(){
-        return this.getName()+", "+this.getClass().getSimpleName()+"->"+"No Sound";
+        return this.getID()+". "+this.getName()+", "+this.getClass().getSimpleName()+"->"+"No Sound";
     }
 }

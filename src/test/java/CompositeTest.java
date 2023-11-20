@@ -34,11 +34,11 @@ public class CompositeTest {
 
     @Test
     public void TestQuack() {
-        assertEquals("Donald, MallardDuck->Quack\n" +
-                "Ronald, MarbledDuck->Quack\n" +
-                "Vivi, AlabioDuck->Quack\n" +
-                "Ducky, RubberDuck->Squeak\n" +
-                "Bad Ducky, WoodenDuck->No Sound\n", flock.quack());
+        assertEquals("1. Donald, MallardDuck->Quack\n" +
+                "2. Ronald, MarbledDuck->Quack\n" +
+                "3. Vivi, AlabioDuck->Quack\n" +
+                "4. Ducky, RubberDuck->Squeak\n" +
+                "5. Bad Ducky, WoodenDuck->No Sound\n", flock.quack());
     }
 
     @Test

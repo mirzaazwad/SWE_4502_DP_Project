@@ -2,9 +2,10 @@ package Ducks;
 
 import Birds.IBird;
 
-public class DuckAdapter implements IQuackable {
+public class DuckAdapter extends DuckIdentification implements IQuackable {
     private IBird bird;
     public DuckAdapter(IBird bird){
+        super();
         this.bird=bird;
     }
     public String getName(){
@@ -12,7 +13,7 @@ public class DuckAdapter implements IQuackable {
     }
 
     public String quack(){
-        return this.getName()+", "+this.getClass().getSimpleName()+"->"+this.bird.makeSound();
+        return this.getID()+". "+this.getName()+", "+this.getClass().getSimpleName()+"->"+this.bird.makeSound();
     }
 
 
