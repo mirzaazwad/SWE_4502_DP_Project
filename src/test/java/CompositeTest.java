@@ -1,5 +1,6 @@
 import Ducks.IQuackable;
 import Ducks.*;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,18 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompositeTest {
-    private Flock flock;
-    private List<String> duck_names;
+    private static Flock flock;
+    private static List<String> duck_names;
 
-    @BeforeEach
-    public void init() {
+    @BeforeAll
+    public static void init() {
         flock = new Flock();
-        this.duck_names = new ArrayList<String>();
-        this.duck_names.add("Donald");
-        this.duck_names.add("Ronald");
-        this.duck_names.add("Vivi");
-        this.duck_names.add("Ducky");
-        this.duck_names.add("Bad Ducky");
+        duck_names = new ArrayList<String>();
+        duck_names.add("Donald");
+        duck_names.add("Ronald");
+        duck_names.add("Vivi");
+        duck_names.add("Ducky");
+        duck_names.add("Bad Ducky");
         IQuackable mallard = new MallardDuck(duck_names.get(0));
         IQuackable marbled = new MarbledDuck(duck_names.get(1));
         IQuackable alabian = new AlabioDuck(duck_names.get(2));
