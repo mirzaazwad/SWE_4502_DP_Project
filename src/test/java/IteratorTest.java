@@ -2,7 +2,7 @@ import Ducks.IQuackable;
 import Ducks.AlabioDuck;
 import Ducks.MallardDuck;
 import Ducks.MarbledDuck;
-import Wrappers.QuackIterator;
+import Wrappers.DuckIterator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class IteratorTest {
-    private QuackIterator quackIterator;
+    private DuckIterator quackIterator;
     private List<String> duck_names;
     @BeforeEach
     public void init(){
@@ -26,7 +26,7 @@ public class IteratorTest {
         ducks.add(mallard);
         ducks.add(marbled);
         ducks.add(alabian);
-        this.quackIterator=new QuackIterator(ducks);
+        this.quackIterator=new DuckIterator(ducks);
     }
     @Test
     public void TestHasNextTrue(){

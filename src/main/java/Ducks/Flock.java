@@ -1,5 +1,5 @@
 package Ducks;
-import Wrappers.QuackIterator;
+import Wrappers.DuckIterator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class Flock implements IQuackable {
     }
 
     public String quack(){
-        QuackIterator quackIterator=new QuackIterator(ducks);
+        DuckIterator quackIterator=new DuckIterator(ducks);
         String result="";
         while (quackIterator.hasNext()){
             IQuackable current_duck=quackIterator.next();
@@ -25,7 +25,7 @@ public class Flock implements IQuackable {
     }
 
     public String getName(){
-        QuackIterator quackIterator=new QuackIterator(ducks);
+        DuckIterator quackIterator=new DuckIterator(ducks);
         String result="";
         Integer i=1;
         while (quackIterator.hasNext()){

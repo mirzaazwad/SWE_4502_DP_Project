@@ -5,11 +5,11 @@ import Ducks.IQuackable;
 import java.util.Iterator;
 import java.util.List;
 
-public class QuackIterator implements Iterator<IQuackable> {
+public class DuckIterator implements Iterator<IQuackable> {
     private List<IQuackable> ducks;
     private int position = 0;
 
-    public QuackIterator(List<IQuackable> ducks) {
+    public DuckIterator(List<IQuackable> ducks) {
         this.ducks = ducks;
     }
 

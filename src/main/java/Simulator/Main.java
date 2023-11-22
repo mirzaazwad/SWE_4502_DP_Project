@@ -4,7 +4,6 @@ import Ducks.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import static Simulator.CounterSimulator.quackCounts;
 import static Simulator.FlockSimulator.*;
 import static Simulator.CreateDuckSimulator.*;
@@ -13,7 +12,7 @@ public class Main {
     public static Scanner scanner=new Scanner(System.in);;
     public static List<IQuackable> ducks = new ArrayList<IQuackable>();
 
-    private static void prompt(){
+    public static void prompt(){
         System.out.println("1. Create Duck");
         System.out.println("2. Add Duck to Flock");
         System.out.println("3. Make a Duck in Flock Quack");

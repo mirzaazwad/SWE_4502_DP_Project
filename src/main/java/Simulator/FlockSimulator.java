@@ -29,7 +29,7 @@ public class FlockSimulator {
             return;
         }
         System.out.println("Making Flock Quack:");
-        System.out.println(flock.quack());
+        flock.quack();
     }
     public static void addToFlock(){
         if(ducks.size()==0){
