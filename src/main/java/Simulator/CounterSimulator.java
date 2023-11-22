@@ -15,10 +15,13 @@ public class CounterSimulator {
         }
         System.out.println("Quack Counts:");
         DuckIterator quackIterator = new DuckIterator(flock.getDucks());
+        Integer total=0;
         while (quackIterator.hasNext()) {
             QuackSubjectDecorator currentDuck = (QuackSubjectDecorator)quackIterator.next();
             System.out.println(currentDuck.getName() + ": " +
                     currentDuck.getDuck().getQuack_count() + " quacks");
+            total+=currentDuck.getDuck().getQuack_count();
         }
+        System.out.printf("Total Quacks: %d",total);
     }
 }
